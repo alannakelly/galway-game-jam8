@@ -10,6 +10,12 @@ var main = (function () {
 
 	var flow = Flow(500,stage,renderer);
 
+	stage.defaultCursorStyle = 'none';
+	stage.mousemove = function( mouseData ) {
+		//console.log( mouseData.data.global );
+		flow.setOrigin(mouseData.data.global );
+	}
+
 	var tick = 0;
 	requestAnimationFrame(animate);
 
