@@ -1,27 +1,17 @@
-var main = (function () {
+define(['pixi', 'vector', 'flow'], function(PIXI, Vector, Flow) {
+    var renderer = PIXI.autoDetectRenderer(1280, 720, { antialias: true }),
+        stage = new PIXI.Container(),
+        flow = Flow(500, stage, renderer),
+        tick = 0;
 
-	var renderer = PIXI.autoDetectRenderer(1280, 720, { antialias: true });
-	document.body.appendChild(renderer.view);
+    function animate() {
+        flow.update();
+        renderer.render(stage);
+        requestAnimationFrame(animate);
+        tick += 0.1;
+    }
 
-	// create the root of the scene graph
-	var stage = new PIXI.Container();
-
-	stage.interactive = true;
-
-	var flow = Flow(500,stage,renderer);
-
-	var tick = 0;
-	requestAnimationFrame(animate);
-
-	function animate() {
-		flow.update();
-		renderer.render(stage);
-		requestAnimationFrame( animate );
-		tick += 0.1;
-	}
-
+    document.body.appendChild(renderer.view);
+    stage.interactive = true;
+    requestAnimationFrame(animate);
 });
-
-main();
-
-

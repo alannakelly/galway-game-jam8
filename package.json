@@ -1,0 +1,24 @@
+{
+  "name": "galway-game-jam8",
+  "version": "1.0.0",
+  "description": "# Theme: Resistance",
+  "main": "index.js",
+  "dependencies": {
+    "pixi": "^0.3.1",
+    "requirejs": "^2.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alannakelly/galway-game-jam8.git"
+  },
+  "author": "Mark Grealish <mark@bhalash.com> (https://www.bhalash.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alannakelly/galway-game-jam8/issues"
+  },
+  "homepage": "https://github.com/alannakelly/galway-game-jam8#readme"
+}

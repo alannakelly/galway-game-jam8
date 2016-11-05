@@ -1,14 +1,9 @@
 {
     "extends": "eslint:recommended",
     "env": {
-        "browser": true
-    },
-    "globals": {
-        "VARIABLES": false,
-        "filepicker": false,
-        "CKEDITOR": false,
-        "moment": false,
-        "_": false
+        "browser": true,
+        "node": true,
+        "es6": true
     },
     "rules": {
         "no-tabs": "error",
@@ -62,7 +57,7 @@
             "error", {
                 "min": 2,
                 "max": 20,
-                "exceptions": ["i", "j", "k", "_", "$"]
+                "exceptions": ["a", "b", "x", "y", "w", "h", "i", "j", "k", "_", "$"]
             }
         ],
         "brace-style": [
